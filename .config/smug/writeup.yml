@@ -1,0 +1,20 @@
+session: writeup
+
+root: ~/Documents/Research/PhD/notes-tex
+
+before_start: ["exec zathura main.pdf"]
+
+env:
+
+stop:
+
+windows:
+  - name: edit
+    root: .
+    before_start: []
+    commands: [nvim]
+  - name: compiler
+    root: .
+    before_start: []
+    commands: ["{fd -e tex -e bib; echo Makefile} | entr make"]
+

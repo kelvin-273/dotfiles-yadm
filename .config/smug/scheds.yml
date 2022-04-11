@@ -1,0 +1,16 @@
+session: scheds
+env: {}
+root: ""
+before_start: []
+stop: []
+windows:
+- name: editor
+  root: /home/kelvin/Documents/Scripts/minizinc/scheds-mzn
+  before_start: []
+  panes:
+  - commands: []
+  - commands: [fd -e mzn -e dzn | entr minizinc main.mzn]
+  commands: [nvim]
+  layout: main-vertical
+rebalance_panes_after: 0
+

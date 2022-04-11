@@ -1,0 +1,50 @@
+scout -ftsea loc
+scout -ftsea wa
+scout -ftsea cac
+scout -ftsea wal
+scout -ftsea .lo
+
+scout -ftsea lo
+scout -ftsea 
+scout -ftsea nvim
+scout -ftsea the
+scout -ftsea p
+scout -ftsea doc
+scout -ftsea z
+scout -ftsea j
+touch Opts.hs
+touch __init__.py
+rename sim.py
+touch plant.py
+touch utils.py
+rename Drawable.hs
+search
+touch main.mzn
+scout -ftsea dow
+scout -ftsea oc
+scout -ftsea scr
+scout -ftsea has
+rename Hierarchy.wiki
+rename Simulation_Notebook.ipynb
+open_with 
+shell 
+open_with nvim
+op
+shell git init
+touch .gitignore
+scout -ftsea sci
+rename Xu2011IPModelExtended.png
+mkdir templates
+scout -ftsea templa
+touch template.html
+scout -ftsea ht
+rename def_template.html
+scout -ftsea us
+scout -ftsea temp
+scout -ftsea templ
+rename default.html
+w
+scout -ftsea tm
+shell mpv GMT20220406-030751_Recording_1920x1080.mp4 &
+delete
+shell

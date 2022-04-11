@@ -1,0 +1,10 @@
+session: tikz
+root: ~/Documents/Scripts/Haskell/projects/genotype
+windows:
+  - name: edit
+    root: .
+    layout: main-vertical
+    panes:
+      - commands: [ghci]
+      - commands: ["fd | entr stack run"]
+    commands: [nvim ./app/Main.hs]
