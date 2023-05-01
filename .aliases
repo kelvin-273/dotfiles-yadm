@@ -3,7 +3,7 @@ alias unmount_phone="fusermount -u mnts/gd"
 alias ff="firefox"
 alias ghc="stack ghc"
 alias ghci="stack ghci"
-alias todo="tmux new-session -s todo taskell \; new-window taskell taskell-teaching.md \; new-window taskell taskell-phd.md"
+alias todo="tmux new-session -s todo taskell \; new-window taskell taskell-phd.md"
 alias nopath="PS1='$ '"
 alias pvim="nvim -i NONE --cmd 'set noswapfile' --cmd 'set nobackup'"
 alias practice="cat > /dev/null"
@@ -14,4 +14,5 @@ alias sc="sc-im"
 alias epdfs="exec pdfs"
 alias notepad=leafpad
 alias pm='pulsemixer'
-alias cal='cal --three'
+alias cal3='cal --three'
+alias zathura='zathura --fork'
