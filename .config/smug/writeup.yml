@@ -1,8 +1,8 @@
 session: writeup
 
-root: ~/Documents/Research/PhD/notes-tex
+root: ~/Documents/Research/PhD/Kelvin-s-PhD-Notes
 
-before_start: ["exec zathura main.pdf"]
+before_start:
 
 env:
 
@@ -13,8 +13,3 @@ windows:
     root: .
     before_start: []
     commands: [nvim]
-  - name: compiler
-    root: .
-    before_start: []
-    commands: ["{fd -e tex -e bib; echo Makefile} | entr make"]
-

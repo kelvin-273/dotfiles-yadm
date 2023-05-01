@@ -1,5 +1,5 @@
 session: tikz
-root: ~/Documents/Scripts/Haskell/projects/genotype
+root: ~/Documents/Scripts/Haskell/projects/gene-draw
 windows:
   - name: edit
     root: .
