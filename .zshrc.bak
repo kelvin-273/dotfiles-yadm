@@ -45,9 +45,7 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 # custom stuff
 AYNRANDOM=$(shuf -i 1-100 -n 1)
-if (( $AYNRANDOM <= 1 )); then
-    echo complacency is the killer
-elif (( $AYNRANDOM <= 20 )); then
+if (( $AYNRANDOM <= 20 )); then
     pacman -Qttq | shuf -n 1 | xargs pacman -Qi
 else
     fortune | cowthink
