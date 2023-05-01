@@ -1,0 +1,56 @@
+Config { font = "xft:Sourc Code Pro:Bold:size=9"
+       , borderColor = "black"
+       , border = TopB
+       , bgColor = "black"
+       , fgColor = "grey"
+       , position = TopW L 100
+       , commands = [ Run StdinReader
+                    -- , Run Weather "086077" [ "-t", "<tempC>C"
+                    --                        , "-L", "18"
+                    --                        , "-H", "25"
+                    --                        , "--normal", "green"
+                    --                        , "--high", "red"
+                    --                        , "--low", "lightblue"
+                    --                        ] 36000
+                    , Run Network "eth0" [ "-L", "0"
+                                         , "-H", "32"
+                                         , "--normal", "green"
+                                         , "--high", "red"
+                                         ] 10
+                    , Run Network "eth1" [ "-L", "0"
+                                         , "-H", "32"
+                                         , "--normal", "green"
+                                         , "--high", "red"
+                                         ] 10
+                    , Run Network "wlp59s0" [ "-L", "0"
+                                            , "-H", "32"
+                                            , "--normal", "green"
+                                            , "--high", "red"
+                                            ] 10
+                    ,  Run Network "wlan0" [ "-L", "0"
+                                           , "-H", "32"
+                                           , "--normal", "green"
+                                           , "--high", "red"
+                                           ] 10
+                    -- , Alsa "default" "Master" [] 10
+                    , Run Cpu ["-L", "3"
+                              , "-H", "50"
+                              , "--normal", "green"
+                              , "--high", "red"
+                              ] 10
+                    , Run Memory ["-t","Mem: <usedratio>%"] 1
+                    , Run Swap [] 10
+                    , Run Battery [ "-t", "<acstatus><watts> (<left>%)"
+                                  , "-L", "10", "-H", "80", "-p", "3"
+                                  , "--", "-O", "<fc=green>On</fc> - ", "-i", ""
+                                  , "--low", "red", "-m", "blue", "--high", "green"
+                                  ] 600
+                    , Run Com "/home/kelvin/bash_scripts/mic-stat" [] "mic" 10
+                    , Run Date "%a %_d %b %H:%M:%S" "date" 10
+                    ]
+       , sepChar = "%"
+       , alignSep = "}{"
+       , template = "%StdinReader% | %cpu% | %memory% * %swap% | %wlp59s0% }{%mic% <fc=#ee9a00>%date%</fc> | %battery%"
+       -- , template = "%StdinReader% | %cpu% | %memory% * %swap% | %wlp59s0% }{<fc=#ee9a00>%date%</fc> | <action=`dmenu`>%battery%</action>"
+       }
+-- vim:ft=haskell
