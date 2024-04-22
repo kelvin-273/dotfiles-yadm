@@ -168,7 +168,7 @@ projects =
             , projectDirectory = "~/"
             , projectStartHook = Just $ do 
                 spawn "spotify"
-                spawn $ runInMyTerminal "pusemixer"
+                spawn $ runInMyTerminal "pulsemixer"
                 --spawn $ runInMyTerminal "cava"
             }
 
@@ -228,7 +228,8 @@ mySearchEngines = [ ("g", google)
 --myStatusBar = "xmobar"
 myStatusBar = "xmobar -x0 /home/kelvin/.xmobarrc"
 
-myTerminals = [ "alacritty"
+myTerminals = [ "kitty"
+              , "alacritty"
               , "st"
               , "urxvt"
               , "gnome-terminal --hide-menubar"

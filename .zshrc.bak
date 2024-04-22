@@ -45,8 +45,10 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 # custom stuff
 AYNRANDOM=$(shuf -i 1-100 -n 1)
-if (( $AYNRANDOM <= 20 )); then
+if (( $AYNRANDOM <= 10 )); then
     pacman -Qttq | shuf -n 1 | xargs pacman -Qi
+elif (( $AYNRANDOM <= 50 )); then
+    shuf -n 1 /home/kelvin/Documents/Research/PhD/ResearchRabbit_Export_12_12_2023_big.bib
 else
     fortune | cowthink
 fi
